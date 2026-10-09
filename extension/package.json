@@ -1,0 +1,9 @@
+{
+  "name": "vertex-chrome-extension",
+  "version": "1.0.0",
+  "description": "Vertex Threat Intelligence Chrome Extension (Manifest V3)",
+  "scripts": {
+    "build": "echo Extension is ready to use directly. Load this folder via chrome://extensions using 'Load unpacked'.",
+    "start": "echo Load unpacked extension in Google Chrome."
+  }
+}

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vertex Autonomous Security</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+    }
+    body {
+      width: 320px;
+      background: #ffffff;
+      color: #09090b;
+      padding: 16px;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #e4e4e7;
+      margin-bottom: 12px;
+    }
+    .brand-title {
+      font-size: 15px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: #09090b;
+    }
+    .brand-sub {
+      font-size: 10px;
+      color: #71717a;
+      font-weight: 500;
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      margin-bottom: 12px;
+    }
+    .stat-card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 10px 12px;
+    }
+    .stat-label {
+      font-size: 10px;
+      color: #64748b;
+      text-transform: uppercase;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      margin-bottom: 2px;
+    }
+    .stat-num {
+      font-size: 18px;
+      font-weight: 800;
+      color: #0f172a;
+      letter-spacing: -0.02em;
+    }
+    .scan-section {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 12px;
+      margin-bottom: 12px;
+    }
+    .section-title {
+      font-size: 11px;
+      color: #334155;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 8px;
+    }
+    .input-group {
+      display: flex;
+      gap: 6px;
+    }
+    input {
+      flex: 1;
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      color: #0f172a;
+      padding: 7px 10px;
+      border-radius: 6px;
+      font-size: 12px;
+      outline: none;
+    }
+    input:focus {
+      border-color: #000000;
+    }
+    button.btn-check {
+      background: #000000;
+      color: #ffffff;
+      border: none;
+      padding: 7px 12px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    button.btn-check:hover {
+      background: #27272a;
+    }
+    .scan-result-card {
+      margin-top: 10px;
+      padding: 10px;
+      background: #ffffff;
+      border-radius: 6px;
+      border: 1px solid #e2e8f0;
+      font-size: 11.5px;
+      display: none;
+    }
+    .footer-btn {
+      width: 100%;
+      background: #000000;
+      color: #ffffff;
+      border: 1px solid #000000;
+      padding: 9px;
+      border-radius: 6px;
+      font-size: 11.5px;
+      font-weight: 700;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      display: block;
+      transition: all 0.15s;
+    }
+    .footer-btn:hover {
+      background: #27272a;
+    }
+    .bench-link {
+      display: block;
+      text-align: center;
+      font-size: 11px;
+      color: #64748b;
+      text-decoration: underline;
+      margin-top: 8px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <div>
+      <div class="brand-title">VERTEX</div>
+      <div class="brand-sub">Autonomous Threat Interception</div>
+    </div>
+  </div>
+
+  <div class="stats-grid">
+    <div class="stat-card">
+      <div class="stat-label">Links Inspected</div>
+      <div class="stat-num" id="stat-links">0</div>
+    </div>
+  </div>
+
+  <div class="scan-section">
+    <div class="section-title">Manual URL Deep Scan</div>
+    <div class="input-group">
+      <input type="text" id="url-input" placeholder="https://example.com" />
+      <button class="btn-check" id="btn-check">Scan</button>
+    </div>
+    <div class="scan-result-card" id="result-box">
+      <div id="result-tier" style="font-weight: 800; margin-bottom: 4px;"></div>
+      <div id="result-desc" style="color: #334155; line-height: 1.4;"></div>
+    </div>
+  </div>
+
+  <a href="http://localhost:3000" target="_blank" class="footer-btn">
+    Open Vertex Security Portal &rarr;
+  </a>
+
+  <script src="popup.js"></script>
+</body>
+</html>
